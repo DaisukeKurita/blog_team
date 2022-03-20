@@ -23,4 +23,11 @@ ActiveRecord::Schema.define(version: 2022_03_20_051409) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  create_table "blogs", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
 end
